@@ -10,6 +10,18 @@ class Program
         PromptGenerator generator = new PromptGenerator();
         Selection select = new Selection();
         Console.WriteLine("Welcome to you journal!");
+
+
+        //added a simple password option for added security since people don't typicall
+        //want their journals out in the open
+        Console.Write("Enter the password to access journal: ");
+        string password = Console.ReadLine();
+
+        if (password != "journalsrock")
+        {
+        Console.WriteLine("Access denied.");
+        return;
+        }
         
         int selection = 0;
 
